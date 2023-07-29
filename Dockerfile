@@ -12,9 +12,6 @@ RUN apt-get update && apt-get install -y \
     libfontconfig1 \
     libxrender1
 
-# Step 3: Install PHP extensions
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd mbstring
 
 # Step 4: Install wkhtmltopdf (optional - only if needed)
 RUN apt-get install -y wkhtmltopdf
